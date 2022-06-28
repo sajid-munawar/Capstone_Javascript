@@ -8,9 +8,11 @@ const display = async () => {
         display.innerHTML += `
         <img src="${element.strCategoryThumb}" alt="">
         <h2>${element.strCategory}</h2>
-        <p>${element.strCategoryDescription}</p>`
-    }); 
+       
+        `
+    })
+        ; 
     
-    console.log(data.categories);
+    // console.log(data.categories);
 }
 export {display}
