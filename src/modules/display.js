@@ -11,6 +11,6 @@ const display = async () => {
         <p>${element.strCategoryDescription}</p>`
     }); 
     
-    console.log(data.categories);
+    // console.log(data.categories);
 }
 export {display}
