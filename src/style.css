@@ -12,6 +12,19 @@ body {
     margin-top: 4%;
 }
 
+.food-image {
+   width: 90%;
+   margin-bottom: 1rem;
+}
+
+.wrapper {
+    width: 380px;
+    height: 330px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+    align-items: center;
+}
+
 .header-title {
     display: flex;
     justify-content: center;
@@ -37,8 +50,27 @@ body {
     font-size: 1.5rem;
 }
 
+.image-comment {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+}
+
+.comments-image {
+   background-color: brown;
+   color: wheat;
+   align-items: center;
+   text-align: center;
+   padding: 1%;
+   font-size: 25px;
+   text-decoration: none;
+   border-radius: 3%;
+   margin-left: 8rem;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 2%;
+    padding: 7%;
 }

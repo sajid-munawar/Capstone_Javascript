@@ -7,9 +7,13 @@ const display = async () => {
     data.categories.forEach(element => {
         display.innerHTML += `
         <div class='wrapper'>
-        <img src="${element.strCategoryThumb}" alt="">
-       <i style="font-size:24px" class="fa">&#xf004;</i>
-        <h2>${element.strCategory}</h2> </div>
+        <img class="food-image" src="${element.strCategoryThumb}" alt="">
+        <div class="image-comment">
+            <h2>${element.strCategory}</h2>
+            <i style="font-size:24px" class="fa">&#xf004;</i>
+            </div>
+            <a class="comments-image" href="#"> Comments</a>
+        </div>
        
         `
     })
