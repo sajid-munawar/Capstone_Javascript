@@ -5,8 +5,6 @@
 }
 
 body {
-    background-color: grey;
-    color: white;
     align-items: center;
 }
 
@@ -17,5 +15,30 @@ body {
 .header-title {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 5%;
+    font-size: 1.5rem;
+}
+
+.header-title a {
+    color: black;
+    text-decoration: none;
+
+}
+.header-title a:hover {
+    text-decoration: underline;
+
+}
+
+.meal-footer {
+    margin-top: 2%;
+    padding: 5%;
+    border-top: 5px solid black;
+    font-size: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2%;
 }

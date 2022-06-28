@@ -6,8 +6,10 @@ const display = async () => {
     const data = await response.json();
     data.categories.forEach(element => {
         display.innerHTML += `
+        <div class='wrapper'>
         <img src="${element.strCategoryThumb}" alt="">
-        <h2>${element.strCategory}</h2>
+       <i style="font-size:24px" class="fa">&#xf004;</i>
+        <h2>${element.strCategory}</h2> </div>
        
         `
     })
