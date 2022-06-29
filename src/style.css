@@ -56,16 +56,22 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.comments-image {
-   background-color: brown;
+.likes-count {
+    float: right;
+    margin-right: 3rem;
+}
+
+#comment-btn {
+   background-color: rgb(242, 76, 76);
    color: wheat;
    align-items: center;
    text-align: center;
    padding: 1%;
    font-size: 25px;
    text-decoration: none;
-   border-radius: 3%;
-   margin-left: 8rem;
+   border: none;
+   margin: 0 4rem;
+   cursor: pointer;
 }
 
 .grid {
@@ -73,4 +79,87 @@ body {
     grid-template-columns: repeat(3,1fr);
     gap: 2%;
     padding: 7%;
+}
+
+/* Popup window */
+.popup-meals-content {
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: black;
+    background-color: rgb(202, 55, 55);
+    border-radius: 1rem;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    overflow-y: scroll;
+    padding: 3rem 3rem;
+    align-items: center;
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+.meals-name {
+    letter-spacing: 1px;
+    background-color: rgb(199, 211, 111);
+    color: white;
+    padding: 7px 5px;
+    border-radius: 10px;
+}
+
+.recipe-close-btn {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    font-size: 1.8rem;
+    background: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    opacity: 0.9;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12rem;
+}
+
+.input-name {
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.input-text {
+    margin: 5px auto;
+    text-align: start;
+    width: 194px;
+    height: auto;
+    padding: 28px;
+    /* border-radius: 2%; */
+}
+
+.btn-comment {
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+.btn-comment:hover {
+    background-color: rgb(218, 109, 109);
+    color: white;
+    border-radius: 1%;
 }

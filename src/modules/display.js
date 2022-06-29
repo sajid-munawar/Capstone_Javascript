@@ -13,13 +13,13 @@ const display = async () => {
             <h2>${element.strCategory}</h2>
             <i style="font-size:24px" class="fa">&#xf004;</i>
             </div>
-            <a class="comments-image" href="#"> Comments</a>
+            <div class="likes-count"><span>0</span> likes </div>
+            <button type="button" class="comments-image-btn" id="comment-btn"> Comments</button>
         </div>
        
         `
-    })
-        ; 
+    }); 
     
-    // console.log(data.categories);
 }
+
 export {display}
