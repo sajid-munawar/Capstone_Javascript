@@ -13,7 +13,7 @@ const display = async () => {
             <i style="font-size:24px" class="fa">&#xf004;</i>
             </div>
             <div class="likes-count"><span>0</span> likes </div>
-            <div class="comments-image"> Comments</div>
+            <button type="button" class="comments-image-btn" id="comment-btn"> Comments</button>
         </div>
        
         `
