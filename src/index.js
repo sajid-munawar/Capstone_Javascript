@@ -19,3 +19,10 @@ cardsContainer.addEventListener('click', (e) => {
     }
 })
 
+const closeBtn = document.querySelector('.recipe-close-btn');
+closeBtn.addEventListener('click', (e) => {
+    popUpWindow.classList.remove('show');
+    popUpWindow.classList.add('hide');
+})
+
+
