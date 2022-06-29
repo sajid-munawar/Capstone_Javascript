@@ -4,6 +4,7 @@ const display = async () => {
     const display=document.querySelector('.display')
     const response = await fetch(url);
     const data = await response.json();
+    // console.log(data);
     data.categories.forEach(element => {
         display.innerHTML += `
         <div class='wrapper'>
