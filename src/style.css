@@ -43,6 +43,10 @@ body {
 
 }
 
+.heart {
+    cursor: pointer;
+}
+
 .meal-footer {
     margin-top: 2%;
     padding: 5%;

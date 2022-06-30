@@ -1,13 +1,29 @@
 import './style.css';
 import { method } from "lodash";
 import { display } from "./modules/display.js";
-import {involvement} from './modules/involvement.js'
+// import {involvement} from './modules/involvement.js'
+import {createLike} from './modules/createLikes.js'
 
 display();
+//     .then(data => {
+//     console.log(data)
+// })
 
-involvement();
+// const hearts = document.querySelectorAll('.heart')
+// console.log(hearts);
 
-// Vdz1CdX8XAXw5ZZiht1J
+// let i = 0;
+
+// setTimeout(function () {
+//     console.log("Sup!");
+// }, 2000);//wait 2 seconds
+
+
+
+// createLike();
+// involvement();
+
+
 
 const popUpbtn = document.querySelectorAll('#comment-btn');
 const popUpWindow = document.querySelector('.popup-meals-content');
