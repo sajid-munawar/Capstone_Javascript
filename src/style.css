@@ -76,6 +76,7 @@ body {
    border: none;
    margin: 0 4rem;
    cursor: pointer;
+   border-radius: 5px;
 }
 
 .grid {
