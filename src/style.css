@@ -81,6 +81,19 @@ body {
    border-radius: 5px;
 }
 
+.get-comment {
+    color: white;
+    display: flex;
+    font-display: column;
+    gap: 2%;
+    
+}
+
+/* .signle-comment {
+    display: flex;
+    justify-content: space-between;
+} */
+
 .grid {
     display: grid;
     grid-template-columns: repeat(3,1fr);
