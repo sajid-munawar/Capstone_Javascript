@@ -52,13 +52,13 @@ const cardsContainer = document.querySelectorAll('.grid');
 // })
 
 
-const closeBtn = document.querySelector('.recipe-close-btn');
-console.log(closeBtn);
-closeBtn.addEventListener('click', (e) => {
-    console.log('ddfd');
-    popUpWindow.classList.remove('show');
-    popUpWindow.classList.add('hide');
-})
+// const closeBtn = document.querySelector('.recipe-close-btn');
+// console.log(closeBtn);
+// closeBtn.addEventListener('click', (e) => {
+//     console.log('ddfd');
+//     popUpWindow.classList.remove('show');
+//     popUpWindow.classList.add('hide');
+// })
 
 // const closeBtn = document.querySelector('.recipe-close-btn');
 //   closeBtn.addEventListener('click', () => {
@@ -73,3 +73,35 @@ closeBtn.addEventListener('click', (e) => {
 //         console.log(modal);
 //     }
 // })
+
+// Comments - involvement API 
+const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/SiBl3uovCC4H9TFx5ybt/comments';
+
+
+
+const postComment = async (id, user, comment)  => {
+    const response = await fetch(url, {
+        method: 'POST', 
+        body: JSON.stringify({
+            item_id: id,
+            username: user,
+            comment: comment,
+        }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.text();
+    console.log(data)
+}
+
+postComment(52772, "Basir", "Amazing");
+
+
+const getComment = async(id) => {
+    const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/SiBl3uovCC4H9TFx5ybt/comments?item_id=${id}`)
+    const data = response.json();
+    console.log(data);
+}
+
+const araay = getComment(52772);
