@@ -1,19 +1,17 @@
 import { createLike, getLikes } from './createLikes.js';
-import { displayPopup } from './popup.js';
 import { postComment, getComment } from './comments.js';
 import { commentCounter, itemCounter } from './ItemCounter.js';
 
 const url = 'https://themealdb.com/api/json/v1/1/categories.php';
 
 const popUpWindow = document.querySelector('.popup-meals-content');
-const cardsContainer = document.querySelectorAll('.grid');
+// const cardsContainer = document.querySelectorAll('.grid');
 
 const display = async () => {
   const display = document.querySelector('.display');
   const itemContainer = document.getElementById('items');
   const response = await fetch(url);
   const data = await response.json();
-  console.log(data);
   const items = itemCounter(data.categories);
   itemContainer.textContent = items;
   // console.log(items);
@@ -30,11 +28,11 @@ const display = async () => {
         </div> `;
 
     document.querySelectorAll('.comments-image-btn').forEach((button, index) => {
-      button.addEventListener('click', (e) => {
+      button.addEventListener('click', () => {
         const item = data.categories[index];
         popUpWindow.classList.add('show');
         popUpWindow.classList.remove('hide');
-        console.log(item.idCategory);
+        // console.log(item.idCategory);
         // displayPopup(item.idCategory);
         const display = document.querySelector('.popup-meals-content');
         display.innerHTML = `
@@ -79,21 +77,19 @@ const display = async () => {
       // To add comment to API and UI
       const form = document.querySelector('.comment-form');
       const commentContainer = document.querySelector('.get-comment');
-      // console.log(form);
       form.addEventListener('submit', (e) => {
         e.preventDefault();
-        console.log(form.id, form.name.value, form.text.value);
         postComment(form.id, form.name.value, form.text.value);
         commentContainer.innerHTML += `<div class="signle-comment"> <div class="date">Now</div>
-                    <div class='username'>${form.name.value}</div>
-                    <div class='comment'>${form.text.value}</div></div>`;
+            <div class='username'>${form.name.value}</div>
+            <div class='comment'>${form.text.value}</div></div>`;
         form.reset();
       });
       // Comment
 
       const generateComment = (i) => `<div class="signle-comment"> <div class="date">${i.creation_date}</div>
-                    <div class='username'>${i.username}</div>
-                    <div class='comment'>${i.comment}</div></div>`;
+          <div class='username'>${i.username}</div>
+          <div class='comment'>${i.comment}</div></div>`;
 
       getComment(index + 1).then((data) => {
         const numComments = commentCounter(data);
@@ -103,28 +99,18 @@ const display = async () => {
           commentContainer.innerHTML += data.map((i) => generateComment(i)).join('');
         }
       });
-      // commentContainer.innerHTML +=
-      //     getComment(index + 1).then(data =>data.map(i =>generateComment(i)).join('')
-      // )
     });
-
-    // const closeBtn = document.querySelector('.recipe-close-btn');
-    // closeBtn.addEventListener('click', () => {
-    //     modal.classList.toggle('hide');
-    // });
-  });
+});
 
   const hearts = document.querySelectorAll('.heart');
-  // console.log(hearts);
   hearts.forEach((heart) => {
     heart.addEventListener('click', () => {
       const span = heart.parentElement.nextElementSibling.firstElementChild;
       const i = span.textContent;
       span.textContent = +i + 1;
       setTimeout(createLike(heart.id), 10000);
-    });
-    //     console.log(heart.id);
   });
+});
 
   hearts.forEach((heart) => {
     const span = heart.parentElement.nextElementSibling.firstElementChild;
@@ -134,8 +120,6 @@ const display = async () => {
           span.textContent = item.likes;
         }
       });
-      // console.log(data[0].likes);
-      // console.log(data[0].item_id)
     });
   });
 

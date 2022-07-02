@@ -1,6 +1,6 @@
 const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
 
-const involvement = async () => {
+export const involvement = async () => {
   const response = await fetch(url, {
     method: 'POST',
     body: JSON.stringify({}),
@@ -9,7 +9,7 @@ const involvement = async () => {
       Accept: 'application/json',
     },
   });
-  const data = await response.text();
+  // const data = await response.text();
 };
 
-export { involvement };
+// export { involvement };
