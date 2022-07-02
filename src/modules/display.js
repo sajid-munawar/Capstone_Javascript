@@ -5,8 +5,6 @@ import { commentCounter, itemCounter } from './ItemCounter.js';
 const url = 'https://themealdb.com/api/json/v1/1/categories.php';
 
 const popUpWindow = document.querySelector('.popup-meals-content');
-// const cardsContainer = document.querySelectorAll('.grid');
-
 const display = async () => {
   const display = document.querySelector('.display');
   const itemContainer = document.getElementById('items');
@@ -14,7 +12,6 @@ const display = async () => {
   const data = await response.json();
   const items = itemCounter(data.categories);
   itemContainer.textContent = items;
-  // console.log(items);
   data.categories.forEach((element) => {
     display.innerHTML += `
         <div class='wrapper'>
@@ -32,8 +29,6 @@ const display = async () => {
         const item = data.categories[index];
         popUpWindow.classList.add('show');
         popUpWindow.classList.remove('hide');
-        // console.log(item.idCategory);
-        // displayPopup(item.idCategory);
         const display = document.querySelector('.popup-meals-content');
         display.innerHTML = `
                 <div class='meal-window'>
@@ -68,9 +63,7 @@ const display = async () => {
     btn.addEventListener('click', () => {
       // To close popup
       const closeBtn = document.querySelector('.recipe-close-btn');
-      // console.log(closeBtn);
       closeBtn.addEventListener('click', () => {
-        // console.log('ddfd');
         popUpWindow.classList.remove('show');
         popUpWindow.classList.add('hide');
       });

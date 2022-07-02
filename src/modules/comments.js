@@ -21,10 +21,7 @@ export const getComment = async (id) => {
   const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/SiBl3uovCC4H9TFx5ybt/comments?item_id=${id}`);
   const data = await response.json();
   if (data === undefined) {
-    // console.log('hii am an error');
     return 0;
   }
   return data;
 };
-
-// getComment(77).then((data) => console.log(data));
