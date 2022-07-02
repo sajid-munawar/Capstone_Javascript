@@ -1,5 +1,7 @@
-const itemCounter = (arr) => arr.length;
+// These methods are to count the length of items and comments
 
-const commentCounter = (arr) => arr.length;
+const itemCounter = arr => arr.length;
+
+const commentCounter = arr => arr.length;
 
 export { itemCounter, commentCounter };

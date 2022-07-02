@@ -4,6 +4,8 @@ import { commentCounter, itemCounter } from './ItemCounter.js';
 
 const url = 'https://themealdb.com/api/json/v1/1/categories.php';
 
+// display the content on the UI
+
 const popUpWindow = document.querySelector('.popup-meals-content');
 const display = async () => {
   const display = document.querySelector('.display');
@@ -24,6 +26,7 @@ const display = async () => {
             <button type="button" class="comments-image-btn" id="comment-btn"> Comments</button>
         </div> `;
 
+    // Display the popup for comments and description
     document.querySelectorAll('.comments-image-btn').forEach((button, index) => {
       button.addEventListener('click', () => {
         const item = data.categories[index];
@@ -58,6 +61,7 @@ const display = async () => {
     });
   });
 
+  // Add comment about the meal
   const commentButton = document.querySelectorAll('#comment-btn');
   commentButton.forEach((btn, index) => {
     btn.addEventListener('click', () => {
@@ -78,12 +82,13 @@ const display = async () => {
             <div class='comment'>${form.text.value}</div></div>`;
         form.reset();
       });
-      // Comment
+      // Generate the templete for Comment
 
       const generateComment = (i) => `<div class="signle-comment"> <div class="date">${i.creation_date}</div>
           <div class='username'>${i.username}</div>
           <div class='comment'>${i.comment}</div></div>`;
-
+      
+      // Get comments from the API
       getComment(index + 1).then((data) => {
         const numComments = commentCounter(data);
         const commentNumContainer = document.getElementById('totalComment');
@@ -94,6 +99,8 @@ const display = async () => {
       });
     });
   });
+
+  // Add like on click of heart icon
 
   const hearts = document.querySelectorAll('.heart');
   hearts.forEach((heart) => {
