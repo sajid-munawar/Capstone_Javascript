@@ -84,15 +84,16 @@ body {
 .get-comment {
     color: white;
     display: flex;
-    font-display: column;
+    flex-direction: column;
     gap: 2%;
     
 }
 
-/* .signle-comment {
+
+.signle-comment {
     display: flex;
     justify-content: space-between;
-} */
+}
 
 .grid {
     display: grid;
@@ -162,20 +163,23 @@ body {
 .input-name {
     padding: 10px;
     margin-top: 5px;
+    max-width: 30%;
 }
 
 .input-text {
-    margin: 5px auto;
+    margin: 5% 0;
     text-align: start;
     width: 194px;
     height: auto;
     padding: 28px;
+    max-width: 60%;
     /* border-radius: 2%; */
 }
 
 .btn-comment {
     padding: 10px 5px;
     cursor: pointer;
+    max-width: 30%;
 }
 
 .btn-comment:hover {

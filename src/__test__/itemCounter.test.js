@@ -1,4 +1,4 @@
-import { itemCounter, commentCounter } from "../modules/itemCounter.js";
+import { itemCounter, commentCounter } from "../modules/ItemCounter.js";
 
 
 test('Should output the total number items displayed on homepage', () => {
