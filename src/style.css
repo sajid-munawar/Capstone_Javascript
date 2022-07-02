@@ -163,17 +163,12 @@ body {
 }
 
 .input-text {
-  margin: 5% 0;
+  margin: 1% 0;
   text-align: start;
   width: 194px;
   height: auto;
   padding: 28px;
   max-width: 60%;
-}
-
-.fa-hamburger {
-  color: #0000;
-  font-size: 38px;
 }
 
 .btn-comment {
