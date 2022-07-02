@@ -88,8 +88,7 @@ body {
 }
 
 .signle-comment {
-  display: flex;
-  justify-content: space-between;
+  margin-top: 2%;
 }
 
 .grid {
@@ -131,6 +130,7 @@ body {
   color: white;
   padding: 7px 5px;
   border-radius: 10px;
+  margin: 2px 30rem;
 }
 
 .recipe-close-btn {
@@ -154,6 +154,11 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 12rem;
+}
+
+.add-comment {
+  display: flex;
+  margin-bottom: 2%;
 }
 
 .input-name {
