@@ -26,12 +26,12 @@ export const postComment = async (id, user, comment) => {
 export const getComment = async (id) => {
     const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/SiBl3uovCC4H9TFx5ybt/comments?item_id=${id}`)
     const data = await response.json();
-    if(data.error) {
+    if(data===undefined) {
         console.log('hii am an error');
-        return null        
+        return 0    
     } else {        
         return data
     }
 }
 
-// getComment(8).then(data=>console.log(data))
+getComment(77).then(data=>console.log(data))

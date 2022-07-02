@@ -2,6 +2,7 @@ import { createLike, getLikes } from "./createLikes.js";
 import { displayPopup } from "./popup.js";
 import { postComment, getComment } from "./comments.js";
 const url = "https://themealdb.com/api/json/v1/1/categories.php";
+import { commentCounter,itemCounter } from "./ItemCounter.js";
 
 
 const popUpWindow = document.querySelector('.popup-meals-content');
@@ -9,9 +10,12 @@ const cardsContainer = document.querySelectorAll('.grid');
 
 const display = async () => {
     const display = document.querySelector('.display')
+    const itemContainer=document.getElementById('items')
     const response = await fetch(url);
     const data = await response.json();
-    // console.log(data);
+    const items = itemCounter(data.categories)
+    itemContainer.textContent=items
+    // console.log(items);
     data.categories.forEach((element) => {
         display.innerHTML += `
         <div class='wrapper'>
@@ -47,7 +51,7 @@ const display = async () => {
                 </div>
                     <h2 class="meals-name">${item.strCategory}</h2>
                     <p>"${item.strCategoryDescription}</p>
-                    <h3 class="comments-count">Comments (<span>0</span>)</h3>
+                    <h3 class="comments-count">Comments (<span id="totalComment">0</span>)</h3>
 
                     <div class="get-comment">
 
@@ -102,9 +106,12 @@ const display = async () => {
             }
 
             getComment(index + 1).then(data => {
-                if (data) {                
+                const numComments = commentCounter(data);
+                const commentNumContainer = document.getElementById('totalComment')
+                if (data.length>0) { 
+                    commentNumContainer.textContent=numComments
                     commentContainer.innerHTML += data.map(i => generateComment(i)).join('')
-                }
+                } 
             })
             // commentContainer.innerHTML +=
             //     getComment(index + 1).then(data =>data.map(i =>generateComment(i)).join('')
