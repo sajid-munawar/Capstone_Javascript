@@ -87,7 +87,7 @@ const display = async () => {
       const generateComment = (i) => `<div class="signle-comment"> <div class="date">${i.creation_date}</div>
           <div class='username'>${i.username}</div>
           <div class='comment'>${i.comment}</div></div>`;
-      
+
       // Get comments from the API
       getComment(index + 1).then((data) => {
         const numComments = commentCounter(data);
