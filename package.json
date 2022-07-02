@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "watch": "webpack --watch",
     "build": "webpack",
     "start": "webpack serve --open"
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/sajid-munawar/Todo-do-list#readme",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.18.6",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^28.1.1",
@@ -30,6 +31,7 @@
     "webpack-dev-server": "^4.9.2"
   },
   "dependencies": {
+    "jest-fetch-mock": "^3.0.3",
     "lodash": "^4.17.21"
   }
 }

@@ -13,6 +13,7 @@ const display = async () => {
     const itemContainer=document.getElementById('items')
     const response = await fetch(url);
     const data = await response.json();
+    console.log(data);
     const items = itemCounter(data.categories)
     itemContainer.textContent=items
     // console.log(items);
