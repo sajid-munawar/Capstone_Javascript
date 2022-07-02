@@ -84,7 +84,7 @@ body {
   color: white;
   display: flex;
   flex-direction: column;
-  gap: 2%;   
+  gap: 2%;
 }
 
 .signle-comment {
@@ -94,7 +94,7 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2%;
   padding: 7%;
 }
@@ -105,7 +105,7 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   color: black;
   background-color: rgb(202, 55, 55);
   border-radius: 1rem;
@@ -114,7 +114,6 @@ body {
   height: 90%;
   overflow-y: scroll;
   padding: 3rem 3rem;
-  align-items: center;
   text-align: center;
 }
 
@@ -174,7 +173,7 @@ body {
 
 .fa-hamburger {
   color: #0000;
-  font-size:38px;
+  font-size: 38px;
 }
 
 .btn-comment {

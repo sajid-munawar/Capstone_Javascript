@@ -13,11 +13,9 @@ export const postComment = async (id, user, comment) => {
       'Content-Type': 'application/json',
     },
   });
-  const data = await response.text();
-  // console.log(data)
+  // const data = await response.text();
 };
 
-// postComment(72, "Basir", "1");
 
 export const getComment = async (id) => {
   const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/SiBl3uovCC4H9TFx5ybt/comments?item_id=${id}`);
