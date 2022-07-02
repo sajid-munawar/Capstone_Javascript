@@ -1,6 +1,5 @@
-import { itemCounter, commentCounter } from "../__test__/ItemCounter.js";
-import fetchMock from 'jest-fetch-mock';
-fetchMock.doMock(); 
+import { itemCounter, commentCounter } from "../modules/itemCounter.js";
+
 
 test('Should output the total number items displayed on homepage', () => {
     const meals = [{
