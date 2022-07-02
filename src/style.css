@@ -61,6 +61,11 @@ a {
   text-align: center;
 }
 
+.meal-footer a {
+    color: black;
+    /* text-decoration: underline; */
+}
+
 .image-comment {
   display: flex;
   justify-content: space-around;

@@ -27,7 +27,7 @@ To get a local copy up and running follow these simple example steps.
 
 #### Homepage
 
-![homepage screenshot](./src/images/homepage.png)
+![homepage screenshot](./src/images/home.png)
 
 #### PopupWindow
 
