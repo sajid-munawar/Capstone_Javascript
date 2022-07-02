@@ -42,6 +42,10 @@ a {
   text-decoration: none;
 }
 
+.meal-footer a {
+  color: black;
+}
+
 .header-title a:hover {
   text-decoration: underline;
 }
@@ -59,10 +63,6 @@ a {
   font-size: 1.5rem;
   align-items: center;
   text-align: center;
-}
-
-.meal-footer a {
-    color: black;
 }
 
 .image-comment {
