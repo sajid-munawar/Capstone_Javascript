@@ -173,7 +173,11 @@ body {
     height: auto;
     padding: 28px;
     max-width: 60%;
-    /* border-radius: 2%; */
+}
+
+.fa-hamburger {
+    color: #000000;
+    font-size:38px;
 }
 
 .btn-comment {

@@ -1,11 +1,5 @@
-const itemCounter = (arr) => {
-    return arr.length
-}
+const itemCounter = (arr) => arr.length;
 
+const commentCounter = (arr) => arr.length;
 
-const commentCounter = (arr) => {
-    return arr.length
-}
-
-export { itemCounter,commentCounter };
-
+export { itemCounter, commentCounter };

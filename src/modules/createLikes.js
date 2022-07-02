@@ -14,10 +14,8 @@ export const createLike = async (id) => {
   return awaitLikes;
 };
 
-
-
 export const getLikes = async () => {
-    const response = await fetch(`${url}${urlID}/likes`);
-    const data =await response.json();
-    return data;
-}
+  const response = await fetch(`${url}${urlID}/likes`);
+  const data = await response.json();
+  return data;
+};
