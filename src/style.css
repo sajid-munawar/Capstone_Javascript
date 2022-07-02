@@ -8,6 +8,10 @@ body {
   align-items: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   margin-top: 4%;
 }
@@ -109,8 +113,8 @@ body {
   background-color: rgb(202, 55, 55);
   border-radius: 1rem;
   align-items: center;
-  width: 90%;
-  height: 90%;
+  width: 88%;
+  height: 95%;
   overflow-y: scroll;
   padding: 3rem 3rem;
   text-align: center;
@@ -170,10 +174,14 @@ body {
 .input-text {
   margin: 1% 0;
   text-align: start;
-  width: 194px;
   height: auto;
   padding: 28px;
-  max-width: 60%;
+  max-width: 30%;
+}
+
+.meal-footer {
+  align-items: center;
+  text-align: center;
 }
 
 .btn-comment {
