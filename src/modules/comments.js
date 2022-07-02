@@ -13,7 +13,8 @@ export const postComment = async (id, user, comment) => {
       'Content-Type': 'application/json',
     },
   });
-  await response.text();
+  const data = await response.text();
+  return data;
 };
 
 export const getComment = async (id) => {

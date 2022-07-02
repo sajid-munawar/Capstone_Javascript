@@ -100,7 +100,7 @@ const display = async () => {
         }
       });
     });
-});
+  });
 
   const hearts = document.querySelectorAll('.heart');
   hearts.forEach((heart) => {
@@ -109,8 +109,8 @@ const display = async () => {
       const i = span.textContent;
       span.textContent = +i + 1;
       setTimeout(createLike(heart.id), 10000);
+    });
   });
-});
 
   hearts.forEach((heart) => {
     const span = heart.parentElement.nextElementSibling.firstElementChild;
@@ -126,4 +126,4 @@ const display = async () => {
   return data;
 };
 
-export { display };
+export default display;
